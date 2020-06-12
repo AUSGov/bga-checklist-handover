@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+
+<body class="au-grid guide_content_page">
+
+    <!-- HEADER -->
+    <div class="header-wrapper">
+        <div class="header">
+            {% include header.html %}
+        </div>
+    </div>
+    
+    
+    <!-- BREADCRUMB -->
+    <div class="breadcrumbs-wrapper">
+        {% include breadcrumb.html %}
+    </div>
+    
+    <!-- PAGE HEADER -->
+
+        <div  class="c-wrapper c-wrapper-bg-transparent  page-header-theme-grey container-fluid" data-reactroot="">
+            <div class="row">
+                <div class="page-header" id="page-header">
+                    <div class="col-12 col-sm-12 col-md-8">
+                        <h1 class="page-header-title">
+                            {{ page.title }}
+                        </h1>
+                        <p class="page-header-update-info">Last Updated: 20 April 2020</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8">
+                        <div class="page-header-intro">
+                            <p>
+                                {{ page.longdesc }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+    {{ content }}
+
+    
+
+    <!-- FOOTER -->
+    <div class="footer-wrapper">
+        <div class="footer">
+            {% include footer.html %}
+        </div>
+    </div>
+    
+    <!-- MODALS -->
+
+    <div class="modal modal-email-form">
+        
+            <div class="modal-content">
+                <h4 class="success">You have saved your checklist progress</h4>
+                
+                <p>Use this link to continue on from where you were: <br/><a href=""><strong>https//business.gov.au/hiring-checklist/GRdwerZyfawe-opt1-yes-opt2-no-opt3-no-opt-4</strong></a></p>
+
+                
+                <form>
+                    <div class="example form-example-container text-box-button-combo-example" data-state="default-state">
+                       
+
+                        <label for="form-text-box-primary" class="form-text-box-primary-label">Enter your email address and we'll send you this link</label>
+
+                        <input id="form-combo-box-primary" name="form-text-box-primary" type="text" value="" class="example-form-element">
+
+                        <div id="send-email" class="combo-button-wrapper primary-button-wrapper">
+                            <div><btn id="primary-combo" class="combo-button primary-combo" aria-label="Primary button"><span>Email my link</span></btn></div>
+                        </div>
+
+                    </div>
+                </form>
+                <div class="modal-close"></div>
+            </div>
+        <div class="modal-overlay"></div>
+    </div>
+        
+    
+    <div class="modal modal-success-message">
+        
+            <div class="modal-content">
+                <h4 class="success">Success – you’ve emailed your checklist link</h4>
+                
+                <p class="last">An email with your link has been sent your email address.</p>
+                <div class="modal-close"></div>
+            </div>
+        <div class="modal-overlay"></div>
+    </div>
+    
+    <div class="modal-overlay-2"></div>
+
+</body>
+
+</html>

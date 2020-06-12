@@ -1,0 +1,904 @@
+/*  CHECKLIST PATTERN  */
+
+// Checklist items & email button
+.checklist-wrapper {
+    
+    // NEWER VERSION
+    &.new {
+        position: relative;
+        padding-top: 0;
+        
+        #email-btn-wrapper, #email-btn-wrapper-2 {
+            background: $yellow-secondary-lightest url("../assets/Icon-save-black.svg") no-repeat;
+            background-position: right 24px center;
+            border-radius: 6px;
+            border: 2px solid $yellow-secondary-light;
+            height: 60px;
+            width: auto;
+            text-align: center;
+            padding: 16px 48px 16px 16px;
+            position: absolute;
+            bottom: 0;
+            top: 32px;
+            right: -224px;
+            width: 200px;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 450;
+            
+            &:hover {
+                background: #FFD00A url("../assets/Icon-save-black.svg") no-repeat;
+                border: 2px solid $yellow-secondary-mid;
+                background-position: right 24px center;
+            }
+            &:active {
+                background: #EDC000 url("../assets/Icon-save-black.svg") no-repeat;
+                border: 2px solid $yellow-secondary;
+                background-position: right 24px center;
+            }
+              
+            .email-btn {
+                display: block;
+                font-size: 16px;
+                @include font-format($font-family, $font-semibold, normal);
+                line-height: 1.5rem;
+                opacity: 1;
+            }
+            &.not-email-box {
+                display: none;
+            }
+        }
+       
+        .email-box-container {
+            background: $grey-lighter;
+            padding: 24px;
+            border-top: 4px solid $grey-light;
+            position: absolute;
+            top: 32px;
+            right: -280px;
+            width: 248px;
+            z-index:450;
+
+            #email-btn-wrapper.email-btn-wrapper-2,
+            #email-btn-wrapper-2.email-btn-wrapper-2{
+                display: block;
+                margin-top: 24px;
+                position: relative;
+                top: auto;
+                right: auto;
+                cursor: pointer;
+            }
+        }
+
+        #email-btn-wrapper-mobile {
+            display: none;
+        }
+
+        .checklist-line {
+            height: calc(100% - 115px);
+            width: 3px;
+            background: $grey;
+            display: block;
+            z-index: 0;
+            position: absolute;
+            margin: 48px 0 0 24px;
+
+        }
+        
+        .checklist-item {
+
+            .checklist-item-title {
+                
+                background: $white url("../assets/Icon-chevron-down-blue.svg") no-repeat;
+                background-position: right 32px center;
+                position: relative;
+                padding: 32px 84px 32px 32px;
+                margin-left: 48px;
+                cursor: pointer;
+
+                h2 {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 26px;
+
+                    span {
+                        position: absolute;
+                        top: 28px;
+                        left: -48px;
+                        border-radius: 50%;
+                        border: 3px solid $grey;
+                        height: 48px;
+                        width: 48px;
+                        text-align: center;
+                        line-height: 38px;
+                        z-index: 100;
+                        background: $white;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                .checklist-sub-item:last-of-type {
+                    &:after {
+                        content: " ";
+                        height: calc(100% - 32px);
+                        width: 5px;
+                        background: $white;
+                        position: absolute;
+                        z-index: 10;
+                        top: 40px;
+                        left: -56px;
+                    }
+                }
+            }
+
+            .checklist-sub-item-wrapper {
+                display: none;
+                margin-left: 48px;
+
+                .checklist-close-step-wrapper {
+                    text-align: right;
+
+                    .checklist-close-step {
+                        margin-bottom: 32px;
+                        display: inline-block;
+                        text-decoration: underline;
+                        color: $blue-primary;
+                        padding-left: 24px;
+                        background: url('../assets/Icon-cross-blue.svg') no-repeat;
+                        background-size: 16px 16px;
+                        background-position: left center;
+                        cursor: pointer;
+                        @include font-format($font-family, $font-semibold, normal);
+                    }
+                }
+            }
+
+            .checklist-sub-item {
+                position: relative;
+                margin-left: 32px;
+
+                &:before {
+                    content: url('../assets/checklist-grey-dot.svg');
+                    position: absolute;
+                    z-index: 100;
+                    left: -67px;
+                    height: 100%;
+                    top: 32px;
+                }
+
+                .checklist-item-content {
+                    background: #E5EDF7;
+                    padding: 16px 32px 32px 32px;
+                    
+                    position: relative;
+
+                    h3 {
+                        padding-right: 120px;
+                    }
+                    a {
+                        color: $blue-primary;
+                        box-shadow: none;
+                        border-bottom: 2px solid $blue-hyperlink;
+                        
+                       
+                        &:hover {
+                            text-decoration: none;
+                            box-shadow: $grey-light 0px -20px 0px 0px inset;
+                        }
+                        &:active {
+                            color: $black;
+                        }
+                    }
+
+                    .checklist-item-tag {
+                        position: absolute;
+                        top: 32px;
+                        right: 32px;
+                        font-size: 14px;
+                        border: solid 2px $blue-primary;
+                        border-radius: 20px;
+                        padding: 2px 15px;
+                        display: inline-block;
+
+                        &.optional {
+                            border: solid 2px $blue-primary;
+                        }
+
+                        &.required {
+                            background: $blue-primary;
+                            color: $white;
+                        }
+                    }
+                    
+                }
+
+                .checklist-item-checkbox {
+                    padding: 16px 32px;
+                    background: #BAC8DB url("../assets/checkbox-unchecked.svg") no-repeat;
+                    background-position: left 32px center;
+
+                    input[type="checkbox"] {
+                        opacity: 0;
+                        width: 28px !important;
+                        height: 28px !important;
+                        cursor: pointer;
+                    }
+
+                    label {
+                        padding-left: 6px;
+                    }
+                }
+
+                &.done {
+                    .checklist-item-checkbox {
+                        background: #B7DDB7 url("../assets/checkbox-checked.svg") no-repeat;
+                        background-position: left 32px center;
+                    }
+
+                    &:before {
+                        content: url('../assets/checklist-grey-dot-checked.svg');
+                        position: absolute;
+                        z-index: 100;
+                        left: -67px;
+                        top: 32px;
+                        height: 100%;
+                    }
+                }
+                
+                &.tip {
+                    &:before {
+                    content: ' ';
+                    
+                }
+                    .checklist-item-content {
+                        background: $grey-lighter;
+                    }
+                }
+            }
+
+            .checklist-item-divider {
+                border-top: 2px solid $grey;
+                width: calc(100% - 80px);
+                margin: 0 0 0 80px;
+                padding: 0;
+            }
+
+            &.open {
+                &:last-of-type {
+                    .checklist-item-title:before {
+                        height: 100%;
+                    }
+                }
+
+                .checklist-item-title {
+                    background: $white url("../assets/Icon-chevron-up-blue.svg") no-repeat;
+                    background-position: right 32px center;
+                    border: none;
+
+                    h2 {
+                        span {
+                            background: $blue-primary;
+                            border: 3px solid $blue-primary;
+                            color: $white;
+                        }
+                    }
+                }
+
+                .checklist-sub-item-wrapper {
+                    display: block;
+
+                }
+            }
+
+            &.item-done {
+                .checklist-item-title {
+                    h2 {
+                        span {
+                            background: $green-positive-dark url("../assets/Icon-tick-white.svg") no-repeat;
+                            background-position: center center;
+                            border: 3px solid $green-positive-dark;
+                            color: $white;
+                            text-indent: -9999px;
+                        }
+                    }
+                }
+            }
+
+            // VERSION WITH MINIMISED STEPS
+            .checklist-sub-item-wrapper.step-minimised {
+
+                .checklist-sub-item {
+                    margin-bottom: 16px;
+
+                    &:last-of-type {
+                        margin-bottom: 32px;
+                    }
+
+                    .checklist-sub-item-title {
+                        background: #E5EDF7 url("../assets/Icon-chevron-down-blue.svg") no-repeat;
+                        background-position: right 32px center;
+                        padding: 24px 180px 24px 32px;
+                        margin-bottom: 0;
+                        position: relative;
+                        cursor: pointer;
+
+                        .checklist-item-tag {
+                            position: absolute;
+                            top: calc(50% - 14px);
+                            right: 68px;
+                            font-size: 13px;
+                            border: solid 2px $blue-primary;
+                            border-radius: 20px;
+                            padding: 0 10px;
+                            display: inline-block;
+                            height: 28px;
+
+                            &.optional {
+                                border: solid 2px $blue-primary;
+                            }
+
+                            &.required {
+                                background: $blue-primary;
+                                color: $white;
+                            }
+                        }
+
+                        h3 {
+                            margin-bottom: 0;
+                        }
+                    }
+                    
+
+                    .content-wrapper {
+                        display: none;
+                    }
+
+                    &.open {
+                        .checklist-sub-item-title {
+                            margin-bottom: 0;
+                            background: #E5EDF7 url("../assets/Icon-chevron-up-blue.svg") no-repeat;
+                            background-position: right 32px center;
+                        }
+                    }
+                    &.tip {
+                        
+                        border:none;
+                        
+                        .checklist-sub-item-title {
+                            background: $grey-lighter url("../assets/Icon-chevron-down-blue.svg") no-repeat;
+                            background-position: right 32px center;
+                            
+                            h3 {
+                                padding-left: 44px;
+                                
+                                span {
+                                    height: 32px;
+                                    width: 24px;
+                                    display: block;
+                                    position: absolute;
+                                    left: 32px;
+                                    top: calc(50% - 16px);
+                                    background: url('../assets/icon-lightbulb-blue.svg') no-repeat;
+                                    background-position: center center;
+                                }
+                            }
+                        }
+                        &.open {
+                                .checklist-sub-item-title {
+                                    background: $grey-lighter url("../assets/Icon-chevron-up-blue.svg") no-repeat;
+                                    background-position: right 32px center;
+                                }
+                            }
+                    }
+                }
+            }
+        }
+        
+        // Media queries
+        @media (max-width: 991px) {
+
+            //padding-top: 96px;
+            //transition: padding 1s ease;
+            
+            &.mobile {
+                padding-top: 0;
+            }
+
+            &.scrolled {
+                padding-top: 32px;
+            }
+            .email-box-container {
+                display: none;
+            }
+            /*
+            #email-btn-wrapper-2 {
+                display: block !important;
+                top: auto !important;
+                bottom: 24px !important;
+                position: fixed;
+                right: 24px;
+                width: 56px;
+                height: 56px;
+                padding: 0;
+                margin: 0;
+                
+                .email-btn {
+                    text-indent: -9999px;
+                }
+                
+            }
+            */
+            
+            /*
+            #email-btn-wrapper {
+                position: absolute;
+                top: 32px;
+                right: 0;
+                width: 200px;
+                padding: 16px 48px 16px 16px;
+                
+                //Animiations
+                &.minimise {
+                    animation-name: shrink-btn;
+                    animation-duration: .5s;
+                    animation-fill-mode: both;
+                    animation-timing-function: ease;
+                    
+                    .email-btn {
+                        animation-name: shrink-text;
+                        animation-duration: .1s;
+                        animation-fill-mode: both;
+                        animation-timing-function: ease;
+                    }
+                    
+                }
+                @keyframes shrink-btn {
+                    0% {
+                        width: 200px;
+                        padding: 16px 48px 16px 16px;
+                        top: 32px;
+                    }
+                    30% {
+                        width: 56px;
+                        top: 32px;
+                    }
+                    100% {
+                        width: 56px;
+                        padding: 0;
+                        top: calc(100% - 96px); 
+                        
+                    }
+                }
+                @keyframes shrink-text {
+                    0% {
+                        opacity: 1;
+                    }
+
+                    100% {
+                       opacity: 0;
+                    }
+                }
+                
+                &.expand {
+                    animation-name: grow-btn;
+                    animation-duration: .5s;
+                    animation-fill-mode: both;
+                    animation-timing-function: ease;
+                    
+                    span {
+                        animation-name: grow-text;
+                        animation-duration: .1s;
+                        animation-delay: .4s;
+                        animation-fill-mode: both;
+                        animation-timing-function: ease;
+                    }
+                }
+                @keyframes grow-btn {
+                    0% {
+                        width: 56px;
+                        padding: 0;  
+                        top: calc(100% - 96px);     
+                    }
+                    30% {
+                        width: 56px;
+                        top: 32px;   
+                    }
+                    100% {
+                        padding: 16px 48px 16px 16px;
+                        width: 200px;
+                        top: 32px;
+                        
+                    }
+                }
+                @keyframes grow-text {
+                    0% {
+                        opacity: 0;
+                    }
+                    100% {
+                       opacity: 1;
+                    }
+                }
+                
+                
+                &.not-email-box {
+                    display: none;
+                }
+            }
+            */
+            
+            #email-btn-wrapper-mobile {
+                display: block;
+                background: $yellow-secondary-lightest;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                margin: 0;
+                padding: 16px 32px;
+                z-index: 3000;
+                text-align: center;
+                @include font-format($font-family, $font-semibold, normal);
+                font-size: 16px;
+                box-shadow: 0px -4px 0.25rem rgba(0, 0, 0, 0.2);
+            }
+            
+            .checklist-line {
+                 width: 2px;
+                 margin: 48px 0 0 8px;
+             }
+            
+            .checklist-item {
+               
+                .checklist-item-title {
+                    padding: 24px 38px 24px 16px;
+                    margin-left: 40px;
+
+                    h2 {
+                        font-size: 24px;
+
+                        span {
+                            top: 20px;
+                            left: -48px;
+                            border: 3px solid $grey;
+                            height: 36px;
+                            width: 36px;
+                            line-height: 1.9rem;
+                        }
+                    }
+                }
+                &:last-of-type {
+                    .checklist-sub-item:last-of-type {
+                        &:after {
+                            left: -48px;
+                        }
+                    }
+                }
+                
+                .checklist-sub-item-wrapper {
+                    margin-left: 24px; 
+                }
+                
+                .checklist-sub-item {
+                    
+                    &:before {
+                        left: -59px;
+                        top: 26px;
+                    }
+                    .checklist-sub-item-title {
+                        padding-left: 24px !important;
+                    }
+                    .checklist-item-content {
+                        padding: 16px 24px 24px 24px;
+
+                        h3 {
+                            padding-right: 0;
+                            width: 100%;
+                        }
+
+                        .checklist-item-tag {
+                            position: relative;
+                            top: auto;
+                            right: auto;
+                            font-size: 13px;
+                            border: solid 2px $blue-primary;
+                            border-radius: 20px;
+                            padding: 0 16px;
+                            margin: 0 0 16px 0;
+                            display: inline-block;
+                            height: 28px;
+                        }
+                    }
+                    &.done {
+                        &:before {
+                            content: url('../assets/checklist-grey-dot-checked.svg');
+                            left: -59px;   
+                        }
+                    }
+                                    }
+                
+                .checklist-item-divider {
+                    border-top: 2px solid $grey;
+                    width: calc(100% - 56px);
+                    margin: 0 0 0 56px;
+                }
+            }  
+        }
+        
+        @media (max-width: 767px) {
+            
+            .checklist-line {
+                width: 2px;
+                margin: 48px 0 0 8px;
+                height: calc(100% - 130px);    
+            }
+            
+            .checklist-item {
+                .checklist-item-title {
+
+                    background-position: right 24px center;
+                    padding: 24px 56px 24px 16px;
+
+                    h2 {
+                        font-size: 20px;
+                        font-size: 20px;
+                    }
+                }
+
+                &:last-of-type {
+                    .checklist-sub-item:last-of-type {
+                        &:after {
+                            left: -48px;
+                        }
+                    }
+                }
+                .checklist-sub-item-wrapper.step-minimised {
+
+                    .checklist-sub-item {
+                        
+                        &:before {
+                            top: 18px;
+                        }
+                        .checklist-sub-item-title {
+                            padding: 16px 64px 16px 24px;
+                            background-position: right 24px center;
+                            
+                            h3 {
+                                font-size: 18px;
+                                line-height: 1.4rem;
+                            }
+
+                            .checklist-item-tag {
+                                position: absolute;
+                                bottom: -24px;
+                                right: auto;
+                                top: auto;
+                                left: 24px;
+                                width: 85px;
+                                text-align: center;
+                                z-index: 200;
+                                opacity: 0;
+                                transition: opacity .6s ease;
+                            }
+                        }
+                        .checklist-item-checkbox {
+                            padding: 8px 24px;
+                            
+                            label {
+                                margin-left: 6px;
+                            }
+                        }
+                        
+                        .checklist-item-content {
+                            padding: 40px 24px 24px 24px;
+                        }
+                        &.open { 
+                            .checklist-sub-item-title {
+                                
+                                .checklist-item-tag {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                        
+                        &.tip {
+                            .checklist-sub-item-title {
+                                h3 {
+                                    padding-left: 34px;
+
+                                    span {
+                                        left: 24px;
+                                    }
+                                }
+                            }
+                            .checklist-item-content {
+                                padding: 8px 24px 24px 24px;
+                            }
+                        }
+                
+                    }
+                }
+                
+                 &.open {
+                    .checklist-item-title {
+                        background-position: right 24px center;
+                        padding: 24px 56px 24px 16px;    
+                    }
+                }
+            }
+        }
+        
+        @media (max-width: 575px) {
+            .checklist-item {
+                .checklist-sub-item-wrapper.step-minimised {
+                    .checklist-sub-item {
+                        &.tip {
+                            .checklist-sub-item-title {
+                                h3 {
+                                    padding-left: 24px;
+
+                                    span {
+                                        height: 22px;
+                                        width: 16px;
+                                        background-size: 16px 22px;
+                                        left: 24px;
+                                        top: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            }
+           
+    }
+
+}
+
+// Modals
+.modal {
+    //display: block !important;
+
+    .modal-overlay {
+        height: 100%;
+        position: fixed;
+        width: 100%;
+        background-color: rgba(51, 51, 51, .7);
+        z-index: 400;
+    }
+    
+    &.open {
+        display: block;
+    }
+
+    .modal-content {
+        position: fixed;
+        top: 22%;
+        left: calc(50% - 350px);
+        width: 700px;
+        padding: 48px 32px 32px 32px;
+        border: none;
+        border-top: solid 4px $blue-primary;
+        border-radius: 0;
+        z-index: 500;
+        
+        h4 {
+            margin-bottom: 32px;
+            
+            &.success {
+                background: url('../assets/icon-tick-green-bckground.svg') no-repeat;
+                background-position: left center;
+                padding-left: 44px;
+                height: 32px;
+            }
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 32px;
+            
+            &.last {
+                margin-bottom: 0;
+            }   
+        }
+        label {
+            width: 100%;
+            display: block;
+            font-size: 16px;
+            padding: 0 0 16px 0;
+            margin: 0;
+        }
+        input {
+            outline: none;
+            border: solid 1px $blue-primary;
+            max-width: 350px;
+            display: inline-block;
+            vertical-align: middle;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 16px;
+            height: 52px;
+            width: 100%;
+            padding: 10px;
+        }
+        .combo-button-wrapper {
+            display: inline-block;
+            vertical-align: middle;
+
+            .combo-button {
+                background: #254F90 url(../assets/send-white.svg) no-repeat;
+                background-position: right 24px center;
+                color: #fff;
+                border: solid 3px $blue-primary;
+                border-left: 0px;
+                margin-left: -5px;
+                border-radius: 6px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                box-shadow: none;
+                height: 52px;
+                display: block;
+                border: solid 1px #495C74;
+                margin: 0 0 0 -6px;
+                padding: 10px 56px 8px 24px;
+                text-align: left;
+                color: #fff;
+                font-family: "Open Sans", sans-serif;
+                font-weight: 600;
+                font-style: normal;
+                text-decoration: none;
+                line-height: 1.8rem;
+                cursor: pointer;
+            }
+        }
+
+        .modal-close {
+            margin-top: 6px;
+            background: url("../assets/Icon-cross-blue.svg") no-repeat;
+            background-size: 20px 20px;
+            height: 40px;
+            min-width: 40px;
+            width: 40px;
+            position: absolute;
+            top: 16px;
+            right: 2px;
+            cursor: pointer;
+        }
+ 
+    }
+    
+    // Media queries
+    @media (max-width: 767px) {
+        .modal-content {
+            left: 5%;
+            width: 90%;
+
+            input {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+            }
+            .combo-button-wrapper {
+                display: block;
+                margin-top: 16px;
+                text-align: right;
+                
+                .combo-button {
+                    display: inline-block;
+                    margin: 0;
+                    border-radius: 6px;
+                }   
+            }
+        }
+    }
+    @media (max-width: 575px) {
+        .modal-content {
+            top: 10%;
+        }
+    }
+
+}
+
+
+
