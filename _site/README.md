@@ -1,3 +1,6 @@
 # BGA Checklist pattern
 
-[Prototype](https://ausgov.github.io/bga-checklist-handover/checklist-demo)
+[Prototype (without chat button)](https://ausgov.github.io/bga-checklist-handover/checklist-demo-chat)
+
+[Prototype (with chat button)](https://ausgov.github.io/bga-checklist-handover/checklist-demo-no-chat)
+

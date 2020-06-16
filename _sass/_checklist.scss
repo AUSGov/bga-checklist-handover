@@ -70,8 +70,12 @@
             }
         }
 
-        #email-btn-wrapper-mobile {
+        #email-btn-wrapper-mobile, #email-btn-wrapper-mobile-chat {
             display: none;
+        }
+        
+        #button-background {
+                display: none;
         }
 
         .checklist-line {
@@ -536,13 +540,31 @@
                 width: 100%;
                 margin: 0;
                 padding: 16px 32px;
-                z-index: 3000;
+                z-index: 4000;
                 text-align: center;
                 @include font-format($font-family, $font-semibold, normal);
                 font-size: 16px;
                 box-shadow: 0px -4px 0.25rem rgba(0, 0, 0, 0.2);
             }
-            
+            #email-btn-wrapper-mobile-chat {
+                display: block;
+                background: $yellow-secondary-lightest;
+                position: fixed;
+                bottom: 5px;
+                right: 170px;
+                margin: 0;
+                padding: 6px 24px;
+                z-index: 4000;
+                text-align: center;
+                @include font-format($font-family, $font-semibold, normal);
+                font-size: 16px;
+                border: 2px solid $yellow-secondary-light;
+                height: 48px;
+                border-radius: 5px;
+            }
+            #button-background {
+                display: block;
+            }
             .checklist-line {
                  width: 2px;
                  margin: 48px 0 0 8px;
@@ -750,6 +772,10 @@
                     }
                 }
             }
+            #email-btn-wrapper-mobile-chat {
+                left: 5px;
+                //right: auto;
+            }
             }
            
     }
@@ -759,13 +785,14 @@
 // Modals
 .modal {
     //display: block !important;
-
+    z-index: 6000;
+    
     .modal-overlay {
         height: 100%;
         position: fixed;
         width: 100%;
         background-color: rgba(51, 51, 51, .7);
-        z-index: 400;
+        z-index: 5500;
     }
     
     &.open {
@@ -781,7 +808,7 @@
         border: none;
         border-top: solid 4px $blue-primary;
         border-radius: 0;
-        z-index: 500;
+        z-index: 6500;
         
         h4 {
             margin-bottom: 32px;
@@ -873,7 +900,7 @@
         .modal-content {
             left: 5%;
             width: 90%;
-
+            
             input {
                 display: block;
                 width: 100%;
@@ -900,5 +927,34 @@
 
 }
 
+// Chat button
+#chat-button {
+    background: #328730 url("../assets/Icon-person-white.svg") no-repeat;
+    background-position: 24px 8px;
+    border: .125rem solid #134b12;
+    border-radius: 5px;
+    height: 48px;
+    width: 160px;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 5000;
+    
+    p {
+        color: $white;
+        text-align: center;
+        padding: 8px 0 0 24px;
+    }
+}
+#button-background {
+    width: 100%;
+    z-index: 3000;
+    background-color: $grey-light;
+    height: 60px;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    box-shadow: 0px 0 0.15rem rgba(0, 0, 0, 0.2);
+}
 
 
