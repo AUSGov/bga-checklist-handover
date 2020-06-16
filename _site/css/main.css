@@ -4883,11 +4883,11 @@ header { position: relative; }
 /*  CHECKLIST PATTERN  */
 .checklist-wrapper.new { position: relative; padding-top: 0; }
 
-.checklist-wrapper.new #email-btn-wrapper, .checklist-wrapper.new #email-btn-wrapper-2 { background: #FFD964 url("../assets/Icon-save-black.svg") no-repeat; background-position: right 24px center; border-radius: 6px; border: 2px solid #F5C550; height: 60px; width: auto; text-align: center; padding: 16px 48px 16px 16px; position: absolute; bottom: 0; top: 32px; right: -224px; width: 200px; box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 450; }
+.checklist-wrapper.new #email-btn-wrapper, .checklist-wrapper.new #email-btn-wrapper-2 { background: #FFD964 url("../assets/Icon-link.svg") no-repeat; background-position: right 24px center; border-radius: 6px; border: 2px solid #F5C550; height: 60px; width: auto; text-align: center; padding: 16px 48px 16px 16px; position: absolute; bottom: 0; top: 32px; right: -224px; width: 200px; box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 450; }
 
-.checklist-wrapper.new #email-btn-wrapper:hover, .checklist-wrapper.new #email-btn-wrapper-2:hover { background: #FFD00A url("../assets/Icon-save-black.svg") no-repeat; border: 2px solid #E1AA21; background-position: right 24px center; }
+.checklist-wrapper.new #email-btn-wrapper:hover, .checklist-wrapper.new #email-btn-wrapper-2:hover { background: #FFD00A url("../assets/Icon-link.svg") no-repeat; border: 2px solid #E1AA21; background-position: right 24px center; }
 
-.checklist-wrapper.new #email-btn-wrapper:active, .checklist-wrapper.new #email-btn-wrapper-2:active { background: #EDC000 url("../assets/Icon-save-black.svg") no-repeat; border: 2px solid #C18100; background-position: right 24px center; }
+.checklist-wrapper.new #email-btn-wrapper:active, .checklist-wrapper.new #email-btn-wrapper-2:active { background: #EDC000 url("../assets/Icon-link.svg") no-repeat; border: 2px solid #C18100; background-position: right 24px center; }
 
 .checklist-wrapper.new #email-btn-wrapper .email-btn, .checklist-wrapper.new #email-btn-wrapper-2 .email-btn { display: block; font-size: 16px; font-family: "Open Sans", sans-serif; font-weight: 600; font-style: normal; line-height: 1.5rem; opacity: 1; }
 
