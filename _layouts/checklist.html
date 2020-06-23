@@ -59,20 +59,29 @@
         
             <div class="modal-content">
                 <h4 class="success">You have saved your checklist progress</h4>
-                
-                <p>Use this link to continue on from where you were: <br/><a href=""><strong>https//business.gov.au/hiring-checklist/GRdwerZyfawe-opt1-yes-opt2-no-opt3-no-opt-4</strong></a></p>
-
-                
                 <form>
+                    <label>Use this link to continue on from where you were:</label>
+                    <div class="flex-wrapper">
+                        <div class="progress-link-wrapper">
+                        <input type="text" id="progress-link" name="progress-link" value="https//business.gov.au/hiring-checklist/GRdwerZyfawe-opt1-yes-opt2-no-opt3-no-opt-4-opt1-yes-opt2-no-opt3-no-opt-4-opt1-yes-opt2-no-opt3-no-opt-4//" >
+                        <div class="input-fade-effect"></div> 
+                        </div>
+                        <btn id="copy-link-btn">Copy my link</btn>
+                    </div>
+
                     <div class="example form-example-container text-box-button-combo-example" data-state="default-state">
-                       
+
 
                         <label for="form-text-box-primary" class="form-text-box-primary-label">You can also enter your email address and we’ll send you this link.</label>
-
+                        
+                        <div class="flex-wrapper mobile-no-flex">
                         <input id="form-combo-box-primary" name="form-text-box-primary" type="text" value="" class="example-form-element">
 
                         <div id="send-email" class="combo-button-wrapper primary-button-wrapper">
-                            <div><btn id="primary-combo" class="combo-button primary-combo" aria-label="Primary button"><span>Email my link</span></btn></div>
+                            <div>
+                                <btn id="primary-combo" class="combo-button primary-combo" aria-label="Primary button"><span>Email my link</span></btn>
+                            </div>
+                        </div>
                         </div>
 
                     </div>

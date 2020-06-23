@@ -263,8 +263,17 @@ $(document).ready(function () {
     // Close modals on click outside modal   
     $('.modal-overlay').on('click', function(){   
         $('.modal').removeClass('open');
+        $('#copy-link-btn').removeClass('copied').text('Copy my link');
     });
 
+    // Select link on input click
+    $('#progress-link').on('click', function(){
+        $(this).focus();
+        $(this).select();
+    });
+    $('#copy-link-btn').on('click', function(){
+        $(this).addClass('copied').text('Link copied');
+    });
     
 }); // END doc ready
 
