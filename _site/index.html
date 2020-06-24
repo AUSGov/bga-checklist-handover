@@ -84,24 +84,28 @@
                         <h3>Important functionality</h3>
                         <ul>
                             <li>The checklist needs to be a repeatable pattern. Content authors need to be able to create new checklists.</li>
-                            
-                            <li>The user needs to be able leave and return to the checklist page  and have their checkbox progress saved. Ideally the checkbox tick is saved in a cookie so user progress is still in place across sessions.</li> 
 
-                            <li>External links within the checklist items should open in the same tab.</li>  
-                            
+                            <li>The user needs to be able leave and return to the checklist page and have their checkbox progress saved. Ideally the checkbox tick is saved in a cookie so user progress is still in place across sessions.</li>
+
+                            <li>External links within the checklist items should open in the same tab.</li>
+
                             <li>The green tick for a step only displays when all the grey ticks in a step are done.</li>
 
                             <li>When a step is closed, any sub-steps underneath them are automatically closed too.</li>
 
                             <li>The "Must do" tags are required for all checkable items. The grey "Tip" items are not checkable and should not have this tag.</li>
-                            
-                            <li>The blue "Email my link" button in the modal should use the design system pattern for a <a href="https://ausgov.github.io/bga-design-system/foundations/standard-form-elements.html">text box combined with primary button</a>. </li>
+
+                            <li>The save progress link (that appears in the pop-up modal) is placed in a text box.&nbsp;Overflow on long links is hidden. To avoid the user copying part of the link instead of the whole link the following is implemented:
+                                <ul>
+                                    <li>The link text field has a small gradient effect at the end where long text overflows the container. This is to subtly indicate that the link is longer than what is visible.</li>
+                                    <li>When the user clicks on the link text field (or it is in focus) the whole link is automatically selected using javascript.</li>
+                                </ul>
+                            </li>
 
                             <li>Text in the accordion items is styled as per the demo. The default styling for these boxes is the standard BGA <a href="https://ausgov.github.io/bga-design-system/foundations/typography.html">body copy styles</a>. </li>
-                            
+
                             <li>Links in accordion items should be purple once visited as per the standard BGA <a href="https://ausgov.github.io/bga-design-system/foundations/buttons-and-links.html">in-text link styles</a>.</li>
 
-                            
                         </ul>
                         
                         <h3>Desirable functionality</h3>

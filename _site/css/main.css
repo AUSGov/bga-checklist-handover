@@ -5039,7 +5039,7 @@ header { position: relative; }
 
 .modal.open { display: block; }
 
-.modal .modal-content { position: fixed; top: 22%; left: calc(50% - 350px); width: 700px; padding: 48px 32px 32px 32px; border: none; border-top: solid 4px #254F90; border-radius: 0; z-index: 6500; /*#copy-link-btn { height: 52px; border: solid 1px $blue-primary; border-left: none; line-height: 1.8rem; text-align: right; padding: 10px 26px; width: 180px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; background: url(../assets/Icon-copy-blue.svg) no-repeat; background-size: 22px; background-position: center left 26px; @include font-format($font-family, $font-semibold, normal); }*/ /*#copy-link-btn { height: 52px; border: solid 1px $blue-primary; border-left: none; line-height: 1.8rem; text-align: right; padding: 10px 26px; width: 180px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; background: $blue-primary url(../assets/Icon-copy-white.svg) no-repeat; background-size: 22px; background-position: center left 26px; color: $white; @include font-format($font-family, $font-semibold, normal); }*/ }
+.modal .modal-content { position: fixed; top: 22%; left: calc(50% - 350px); width: 700px; padding: 48px 32px 32px 32px; border: none; border-top: solid 4px #254F90; border-radius: 0; z-index: 6500; }
 
 .modal .modal-content h4 { margin-bottom: 32px; }
 
@@ -5069,7 +5069,11 @@ header { position: relative; }
 
 .modal .modal-content .combo-button-wrapper #form-combo-box-primary { width: calc(100% - 180px); }
 
-.modal .modal-content .combo-button-wrapper .combo-button { background: #254F90 url(../assets/send-white.svg) no-repeat; background-position: left 22px center; color: #ffffff; border: solid 3px #254F90; border-left: 0px; margin-left: -5px; border-radius: 6px; border-top-left-radius: 0px; border-bottom-left-radius: 0px; box-shadow: none; height: 52px; display: block; border: solid 1px #495C74; margin: 0 0 0 -6px; padding: 10px 22px; text-align: right; font-family: "Open Sans", sans-serif; font-weight: 600; font-style: normal; text-decoration: none; line-height: 1.8rem; cursor: pointer; width: 180px; }
+.modal .modal-content .combo-button-wrapper .combo-button { background: #4569A0 url(../assets/send-white.svg) no-repeat; background-position: left 22px center; color: #ffffff; border: solid 3px #254F90; border-left: 0px; margin-left: -5px; border-radius: 6px; border-top-left-radius: 0px; border-bottom-left-radius: 0px; box-shadow: none; height: 52px; display: block; border: solid 1px #495C74; margin: 0 0 0 -6px; padding: 10px 22px; text-align: right; font-family: "Open Sans", sans-serif; font-weight: 600; font-style: normal; text-decoration: none; line-height: 1.8rem; cursor: pointer; width: 180px; }
+
+.modal .modal-content .combo-button-wrapper .combo-button:hover { background: #254F90 url(../assets/send-white.svg) no-repeat; background-position: left 22px center; }
+
+.modal .modal-content .combo-button-wrapper .combo-button:active { background: #18335C url(../assets/send-white.svg) no-repeat; background-position: left 22px center; }
 
 .modal .modal-content .modal-close { margin-top: 6px; background: url("../assets/Icon-cross-blue.svg") no-repeat; background-size: 20px 20px; height: 40px; min-width: 40px; width: 40px; position: absolute; top: 16px; right: 2px; cursor: pointer; }
 
