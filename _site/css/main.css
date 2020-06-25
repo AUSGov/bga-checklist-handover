@@ -5067,6 +5067,8 @@ header { position: relative; }
 
 .modal .modal-content #copy-link-btn.copied { color: #297E28; background: url(../assets/Icon-copy-green.svg) no-repeat; background-size: 24px; background-position: center left 16px; }
 
+.modal .modal-content .text-box-button-combo-wrapper input:focus, .modal .modal-content .text-box-button-combo-wrapper input:active { border: solid 3px #254F90; }
+
 .modal .modal-content .combo-button-wrapper #form-combo-box-primary { width: calc(100% - 180px); }
 
 .modal .modal-content .combo-button-wrapper .combo-button { background: #4569A0 url(../assets/send-white.svg) no-repeat; background-position: left 22px center; color: #ffffff; border: solid 3px #254F90; border-left: 0px; margin-left: -5px; border-radius: 6px; border-top-left-radius: 0px; border-bottom-left-radius: 0px; box-shadow: none; height: 52px; display: block; border: solid 1px #495C74; margin: 0 0 0 -6px; padding: 10px 22px; text-align: right; font-family: "Open Sans", sans-serif; font-weight: 600; font-style: normal; text-decoration: none; line-height: 1.8rem; cursor: pointer; width: 180px; }

@@ -898,6 +898,12 @@
                 background-position: center left 16px;
             }
         }
+        
+        .text-box-button-combo-wrapper {
+            input:focus, input:active {
+                border: solid 3px $blue-primary;
+            }
+        }
 
         .combo-button-wrapper {
             
