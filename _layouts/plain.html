@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+
+<body class="au-grid guide_content_page">
+
+    <div style="background-color:" class="c-wrapper c-wrapper-bg-transparent search-bar-wrapper container-fluid">
+        <div class="row">
+            <div class="search-bar-container">
+                <div class="search-bar-inner-wrapper"><a href="" class="search-bar-desktop-logo">
+
+                        <img src={{ "assets/bga_crest.svg" | relative_url }} alt="business.gov.au design system"></a>
+                    <a href="" class="mobile-site-title">business.gov.au</a>
+                    
+                    
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- PAGE HEADER -->
+
+        <div  class="c-wrapper c-wrapper-bg-transparent  page-header-theme-grey container-fluid" data-reactroot="">
+            <div class="row">
+                <div class="page-header" id="page-header">
+                    <div class="col-12 col-sm-12 col-md-10">
+                        <h1 id="link-title" class="page-header-title">
+                            <a href={{"checklist-demo-chat" | relative_url }} >{{ page.title }}</a>
+                        </h1>
+                        
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-10">
+                        <div class="page-header-intro">
+                            <p>
+                               {{ page.longdesc }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+    {{ content }}
+
+    
+
+
+    
+
+</body>
+
+</html>

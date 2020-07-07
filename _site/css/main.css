@@ -5098,4 +5098,10 @@ header { position: relative; }
 
 #button-background { width: 100%; z-index: 3000; background-color: #D8D8D8; height: 60px; bottom: 0; left: 0; position: fixed; box-shadow: 0px 0 0.15rem rgba(0, 0, 0, 0.2); }
 
+h1#link-title a { text-decoration: none; }
+
+#showcase h2 { font-size: 28px; }
+
+#showcase ul li { font-size: 22px; }
+
 /*# sourceMappingURL=main.css.map */
