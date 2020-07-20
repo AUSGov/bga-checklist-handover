@@ -4909,6 +4909,12 @@ header { position: relative; }
 
 .checklist-wrapper.new .checklist-item .checklist-item-title h2 span { position: absolute; top: 28px; left: -48px; border-radius: 50%; border: 3px solid #C7C7C7; height: 48px; width: 48px; text-align: center; line-height: 38px; z-index: 100; background: #ffffff; }
 
+.checklist-wrapper.new .checklist-item .checklist-item-title:hover { background: url("../assets/Icon-chevron-down-hover-grey.svg") no-repeat; background-position: right 24px center; background-size: 36px 36px; }
+
+.checklist-wrapper.new .checklist-item .checklist-item-title:hover h2 { text-decoration: underline; }
+
+.checklist-wrapper.new .checklist-item .checklist-item-title:active { background: url("../assets/Icon-chevron-down-active-grey.svg") no-repeat; background-position: right 24px center; background-size: 36px 36px; }
+
 .checklist-wrapper.new .checklist-item:last-of-type .checklist-sub-item:last-of-type:after { content: " "; height: calc(100% - 32px); width: 5px; background: #ffffff; position: absolute; z-index: 10; top: 40px; left: -56px; }
 
 .checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper { display: none; margin-left: 48px; }
@@ -4959,6 +4965,12 @@ header { position: relative; }
 
 .checklist-wrapper.new .checklist-item.open .checklist-item-title h2 span { background: #254F90; border: 3px solid #254F90; color: #ffffff; }
 
+.checklist-wrapper.new .checklist-item.open .checklist-item-title:hover { background: url("../assets/Icon-chevron-up-hover-grey.svg") no-repeat; background-position: right 24px center; background-size: 36px 36px; }
+
+.checklist-wrapper.new .checklist-item.open .checklist-item-title:hover h2 { text-decoration: underline; }
+
+.checklist-wrapper.new .checklist-item.open .checklist-item-title:active { background: url("../assets/Icon-chevron-up-active-grey.svg") no-repeat; background-position: right 24px center; background-size: 36px 36px; }
+
 .checklist-wrapper.new .checklist-item.open .checklist-sub-item-wrapper { display: block; }
 
 .checklist-wrapper.new .checklist-item.item-done .checklist-item-title h2 span { background: #297E28 url("../assets/Icon-tick-white.svg") no-repeat; background-position: center center; border: 3px solid #297E28; color: #ffffff; text-indent: -9999px; }
@@ -4968,6 +4980,12 @@ header { position: relative; }
 .checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item:last-of-type { margin-bottom: 32px; }
 
 .checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item .checklist-sub-item-title { background: #E5EDF7 url("../assets/Icon-chevron-down-blue.svg") no-repeat; background-position: right 32px center; padding: 24px 180px 24px 32px; margin-bottom: 0; position: relative; cursor: pointer; }
+
+.checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item .checklist-sub-item-title:hover { background: #E5EDF7 url("../assets/Icon-chevron-down-hover-white.svg") no-repeat; background-position: right 24px center; background-size: 36px 36px; }
+
+.checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item .checklist-sub-item-title:hover h3 { text-decoration: underline; }
+
+.checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item .checklist-sub-item-title:active { background: #E5EDF7 url("../assets/Icon-chevron-down-active-white.svg") no-repeat; background-position: right 24px center; background-size: 36px 36px; }
 
 .checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item .checklist-sub-item-title .checklist-item-tag { position: absolute; top: calc(50% - 14px); right: 68px; font-size: 13px; border: solid 2px #254F90; border-radius: 20px; padding: 0 10px; display: inline-block; height: 28px; }
 
@@ -4981,6 +4999,12 @@ header { position: relative; }
 
 .checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item.open .checklist-sub-item-title { margin-bottom: 0; background: #E5EDF7 url("../assets/Icon-chevron-up-blue.svg") no-repeat; background-position: right 32px center; }
 
+.checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item.open .checklist-sub-item-title:hover { background: #E5EDF7 url("../assets/Icon-chevron-up-hover-white.svg") no-repeat; background-position: right 24px center; background-size: 36px 36px; }
+
+.checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item.open .checklist-sub-item-title:hover h3 { text-decoration: underline; }
+
+.checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item.open .checklist-sub-item-title:active { background: #E5EDF7 url("../assets/Icon-chevron-up-active-white.svg") no-repeat; background-position: right 24px center; background-size: 36px 36px; }
+
 .checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item.tip { border: none; }
 
 .checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item.tip .checklist-sub-item-title { background: #EBEBEB url("../assets/Icon-chevron-down-blue.svg") no-repeat; background-position: right 32px center; }
@@ -4989,7 +5013,19 @@ header { position: relative; }
 
 .checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item.tip .checklist-sub-item-title h3 span { height: 32px; width: 24px; display: block; position: absolute; left: 32px; top: calc(50% - 16px); background: url("../assets/icon-lightbulb-blue.svg") no-repeat; background-position: center center; }
 
+.checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item.tip .checklist-sub-item-title:hover { background: #EBEBEB url("../assets/Icon-chevron-down-hover-white.svg") no-repeat; background-position: right 24px center; background-size: 36px 36px; }
+
+.checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item.tip .checklist-sub-item-title:hover h3 { text-decoration: underline; }
+
+.checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item.tip .checklist-sub-item-title:active { background: #EBEBEB url("../assets/Icon-chevron-down-active-white.svg") no-repeat; background-position: right 24px center; background-size: 36px 36px; }
+
 .checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item.tip.open .checklist-sub-item-title { background: #EBEBEB url("../assets/Icon-chevron-up-blue.svg") no-repeat; background-position: right 32px center; }
+
+.checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item.tip.open .checklist-sub-item-title:hover { background: #EBEBEB url("../assets/Icon-chevron-up-hover-white.svg") no-repeat; background-position: right 24px center; background-size: 36px 36px; }
+
+.checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item.tip.open .checklist-sub-item-title:hover h3 { text-decoration: underline; }
+
+.checklist-wrapper.new .checklist-item .checklist-sub-item-wrapper.step-minimised .checklist-sub-item.tip.open .checklist-sub-item-title:active { background: #EBEBEB url("../assets/Icon-chevron-up-active-white.svg") no-repeat; background-position: right 24px center; background-size: 36px 36px; }
 
 @media (max-width: 991px) { .checklist-wrapper.new { /* #email-btn-wrapper-2 { display: block !important; top: auto !important; bottom: 24px !important; position: fixed; right: 24px; width: 56px; height: 56px; padding: 0; margin: 0; .email-btn { text-indent: -9999px; } } */ /* #email-btn-wrapper { position: absolute; top: 32px; right: 0; width: 200px; padding: 16px 48px 16px 16px; //Animiations &.minimise { animation-name: shrink-btn; animation-duration: .5s; animation-fill-mode: both; animation-timing-function: ease; .email-btn { animation-name: shrink-text; animation-duration: .1s; animation-fill-mode: both; animation-timing-function: ease; } } @keyframes shrink-btn { 0% { width: 200px; padding: 16px 48px 16px 16px; top: 32px; } 30% { width: 56px; top: 32px; } 100% { width: 56px; padding: 0; top: calc(100% - 96px);  } } @keyframes shrink-text { 0% { opacity: 1; } 100% { opacity: 0; } } &.expand { animation-name: grow-btn; animation-duration: .5s; animation-fill-mode: both; animation-timing-function: ease; span { animation-name: grow-text; animation-duration: .1s; animation-delay: .4s; animation-fill-mode: both; animation-timing-function: ease; } } @keyframes grow-btn { 0% { width: 56px; padding: 0;   top: calc(100% - 96px);      } 30% { width: 56px; top: 32px;    } 100% { padding: 16px 48px 16px 16px; width: 200px; top: 32px; } } @keyframes grow-text { 0% { opacity: 0; } 100% { opacity: 1; } } &.not-email-box { display: none; } } */ }
   .checklist-wrapper.new.mobile { padding-top: 0; }

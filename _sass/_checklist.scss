@@ -119,6 +119,19 @@
                         background: $white;
                     }
                 }
+                &:hover {
+                    h2 {
+                        text-decoration: underline;
+                    }
+                    background: url("../assets/Icon-chevron-down-hover-grey.svg") no-repeat;
+                    background-position: right 24px center;
+                    background-size: 36px 36px;  
+                }
+                &:active {
+                    background: url("../assets/Icon-chevron-down-active-grey.svg") no-repeat;
+                    background-position: right 24px center;
+                    background-size: 36px 36px; 
+                }
             }
 
             &:last-of-type {
@@ -287,6 +300,19 @@
                             color: $white;
                         }
                     }
+                    &:hover {
+                        h2 {
+                            text-decoration: underline;
+                        }
+                        background: url("../assets/Icon-chevron-up-hover-grey.svg") no-repeat;
+                        background-position: right 24px center;
+                        background-size: 36px 36px;  
+                    }
+                    &:active {
+                        background: url("../assets/Icon-chevron-up-active-grey.svg") no-repeat;
+                        background-position: right 24px center;
+                        background-size: 36px 36px; 
+                    }
                 }
 
                 .checklist-sub-item-wrapper {
@@ -326,6 +352,21 @@
                         margin-bottom: 0;
                         position: relative;
                         cursor: pointer;
+                        
+                        &:hover {
+                            background: #E5EDF7 url("../assets/Icon-chevron-down-hover-white.svg") no-repeat;
+                            background-position: right 24px center;
+                            background-size: 36px 36px;
+                            
+                            h3 {
+                                text-decoration: underline;
+                            }
+                        }
+                        &:active {
+                            background: #E5EDF7 url("../assets/Icon-chevron-down-active-white.svg") no-repeat;
+                            background-position: right 24px center;
+                            background-size: 36px 36px; 
+                        }
 
                         .checklist-item-tag {
                             position: absolute;
@@ -363,6 +404,22 @@
                             margin-bottom: 0;
                             background: #E5EDF7 url("../assets/Icon-chevron-up-blue.svg") no-repeat;
                             background-position: right 32px center;
+                            
+                            &:hover {
+                                 h3 {
+                                     text-decoration: underline;
+                                 }
+
+                                 background: #E5EDF7 url("../assets/Icon-chevron-up-hover-white.svg") no-repeat;
+                                 background-position: right 24px center;
+                                 background-size: 36px 36px;
+                             }
+
+                             &:active {
+                                 background: #E5EDF7 url("../assets/Icon-chevron-up-active-white.svg") no-repeat;
+                                 background-position: right 24px center;
+                                 background-size: 36px 36px;
+                             }
                         }
                     }
                     &.tip {
@@ -387,11 +444,41 @@
                                     background-position: center center;
                                 }
                             }
+                            
+                             &:hover {
+                                 h3 {
+                                     text-decoration: underline;
+                                 }
+
+                                 background: $grey-lighter url("../assets/Icon-chevron-down-hover-white.svg") no-repeat;
+                                 background-position: right 24px center;
+                                 background-size: 36px 36px;
+                             }
+
+                             &:active {
+                                 background: $grey-lighter url("../assets/Icon-chevron-down-active-white.svg") no-repeat;
+                                 background-position: right 24px center;
+                                 background-size: 36px 36px;
+                             }
                         }
                         &.open {
                                 .checklist-sub-item-title {
                                     background: $grey-lighter url("../assets/Icon-chevron-up-blue.svg") no-repeat;
                                     background-position: right 32px center;
+                                    
+                                     &:hover {
+                                        h3 {
+                                            text-decoration: underline;
+                                        }
+                                        background: $grey-lighter url("../assets/Icon-chevron-up-hover-white.svg") no-repeat;
+                                        background-position: right 24px center;
+                                        background-size: 36px 36px;  
+                                    }
+                                    &:active {
+                                        background: $grey-lighter url("../assets/Icon-chevron-up-active-white.svg") no-repeat;
+                                        background-position: right 24px center;
+                                        background-size: 36px 36px; 
+                                    }
                                 }
                             }
                     }
