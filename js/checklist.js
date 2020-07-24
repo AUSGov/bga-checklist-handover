@@ -44,6 +44,13 @@ $(document).ready(function () {
          
      });
     
+    /*------------------- Reset checklist items -------------------*/
+    $('#clear-progress').on('click', function(){
+        $('.checklist-sub-item').removeClass('open').removeClass('done');
+        $('.checklist-item').removeClass('open').removeClass('item-done');
+        $('.checklist-sub-item-wrapper').hide();
+    });
+    
     
     /*------------------- Checkbox functionality -------------------*/
     $('.checklist-item-checkbox').on('click', function(){
@@ -71,6 +78,8 @@ $(document).ready(function () {
     });
     
     
+    
+    
     /*------------------- Email button functionality -------------------*/
 
 
@@ -83,11 +92,12 @@ $(document).ready(function () {
             container_left = wrapper_width + 32 + wrapper_left,
             footer_pos = $('footer').offset(),
             footer_top =footer_pos.top,
-            container_height = $('.email-box-container').outerHeight(),
+            container_height = $('.side-bar-container').outerHeight(),
             container_bottom_pos = footer_top - container_height - 64;
         
          var mq = window.matchMedia( "(min-width: 992px)" );
     }
+    
 
     // CHANGE ON RESIZE reset positioning variables and reposition element
 
@@ -101,7 +111,7 @@ $(document).ready(function () {
             container_left = wrapper_width + 32 + wrapper_left;
             footer_pos = $('footer').offset();
             footer_top =footer_pos.top;
-            container_height = $('.email-box-container').outerHeight();
+            container_height = $('.side-bar-container').outerHeight();
             container_bottom_pos = footer_top - container_height - 64;
         }
 
@@ -113,7 +123,7 @@ $(document).ready(function () {
                 
                 if ($(window).scrollTop() < container_bottom_pos) {
                                     
-                    $('.email-box-container').css({
+                    $('.side-bar-container').css({
                         'top': '32px',
                         'bottom': 'auto',
                         'left': container_left,
@@ -124,7 +134,7 @@ $(document).ready(function () {
                 }
                 else if ($(window).scrollTop() >= container_bottom_pos){
                         
-                    $('.email-box-container').css({
+                    $('.side-bar-container').css({
                         'top': 'auto',
                         'bottom': '0',
                         'left': 'auto',
@@ -136,7 +146,7 @@ $(document).ready(function () {
             } 
             else if ($(window).scrollTop() <= (wrapper_top)) {
 
-               $('.email-box-container').css({
+               $('.side-bar-container').css({
                     'right':'-280px',
                     'left':'auto',
                     'top': '32px',
@@ -158,7 +168,7 @@ $(document).ready(function () {
         // Reset button /footer variables at start of scroll
         footer_pos = $('footer').offset();
         footer_top =footer_pos.top;
-        container_height = $('.email-box-container').outerHeight();
+        container_height = $('.side-bar-container').outerHeight();
         container_bottom_pos = footer_top - container_height - 64;
         
         if(mq.matches) { // Wider than 991px - Position BUTTON
@@ -169,7 +179,7 @@ $(document).ready(function () {
                 
                 if ($(window).scrollTop() < container_bottom_pos) {
                                     
-                    $('.email-box-container').css({
+                    $('.side-bar-container').css({
                         'top': '32px',
                         'bottom': 'auto',
                         'left': container_left,
@@ -180,7 +190,7 @@ $(document).ready(function () {
                 }
                 else if ($(window).scrollTop() >= container_bottom_pos){
                         
-                    $('.email-box-container').css({
+                    $('.side-bar-container').css({
                         'top': 'auto',
                         'bottom': '0',
                         'left': 'auto',
@@ -192,7 +202,7 @@ $(document).ready(function () {
             } 
             else if ($(window).scrollTop() <= (wrapper_top)) {
 
-               $('.email-box-container').css({
+               $('.side-bar-container').css({
                     'right':'-280px',
                     'left':'auto',
                     'top': '32px',
