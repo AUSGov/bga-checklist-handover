@@ -543,9 +543,6 @@
         
         // Media queries
         @media (max-width: 991px) {
-
-            //padding-top: 96px;
-            //transition: padding 1s ease;
             
             &.mobile {
                 padding-top: 0;
@@ -557,121 +554,7 @@
             .email-box-container {
                 display: none;
             }
-            /*
-            #email-btn-wrapper-2 {
-                display: block !important;
-                top: auto !important;
-                bottom: 24px !important;
-                position: fixed;
-                right: 24px;
-                width: 56px;
-                height: 56px;
-                padding: 0;
-                margin: 0;
-                
-                .email-btn {
-                    text-indent: -9999px;
-                }
-                
-            }
-            */
             
-            /*
-            #email-btn-wrapper {
-                position: absolute;
-                top: 32px;
-                right: 0;
-                width: 200px;
-                padding: 16px 48px 16px 16px;
-                
-                //Animiations
-                &.minimise {
-                    animation-name: shrink-btn;
-                    animation-duration: .5s;
-                    animation-fill-mode: both;
-                    animation-timing-function: ease;
-                    
-                    .email-btn {
-                        animation-name: shrink-text;
-                        animation-duration: .1s;
-                        animation-fill-mode: both;
-                        animation-timing-function: ease;
-                    }
-                    
-                }
-                @keyframes shrink-btn {
-                    0% {
-                        width: 200px;
-                        padding: 16px 48px 16px 16px;
-                        top: 32px;
-                    }
-                    30% {
-                        width: 56px;
-                        top: 32px;
-                    }
-                    100% {
-                        width: 56px;
-                        padding: 0;
-                        top: calc(100% - 96px); 
-                        
-                    }
-                }
-                @keyframes shrink-text {
-                    0% {
-                        opacity: 1;
-                    }
-
-                    100% {
-                       opacity: 0;
-                    }
-                }
-                
-                &.expand {
-                    animation-name: grow-btn;
-                    animation-duration: .5s;
-                    animation-fill-mode: both;
-                    animation-timing-function: ease;
-                    
-                    span {
-                        animation-name: grow-text;
-                        animation-duration: .1s;
-                        animation-delay: .4s;
-                        animation-fill-mode: both;
-                        animation-timing-function: ease;
-                    }
-                }
-                @keyframes grow-btn {
-                    0% {
-                        width: 56px;
-                        padding: 0;  
-                        top: calc(100% - 96px);     
-                    }
-                    30% {
-                        width: 56px;
-                        top: 32px;   
-                    }
-                    100% {
-                        padding: 16px 48px 16px 16px;
-                        width: 200px;
-                        top: 32px;
-                        
-                    }
-                }
-                @keyframes grow-text {
-                    0% {
-                        opacity: 0;
-                    }
-                    100% {
-                       opacity: 1;
-                    }
-                }
-                
-                
-                &.not-email-box {
-                    display: none;
-                }
-            }
-            */
             
             #email-btn-wrapper-mobile {
                 display: block;
@@ -787,6 +670,7 @@
                     margin: 0 0 0 56px;
                 }
             }  
+            
         }
         
         @media (max-width: 767px) {
@@ -806,6 +690,10 @@
                     h2 {
                         font-size: 20px;
                         font-size: 20px;
+                    }
+                    &:hover, 
+                    &:active {
+                        background-position: right 15px center !important;
                     }
                 }
 
@@ -827,6 +715,7 @@
                             padding: 16px 64px 16px 24px;
                             background-position: right 24px center;
                             
+                            
                             h3 {
                                 font-size: 18px;
                                 line-height: 1.4rem;
@@ -844,6 +733,10 @@
                                 opacity: 0;
                                 transition: opacity .6s ease;
                             }
+                            &:hover, 
+                            &:active {
+                                background-position: right 15px center !important;
+                            }
                         }
                         .checklist-item-checkbox {
                             padding: 8px 24px;
@@ -858,6 +751,12 @@
                         }
                         &.open { 
                             .checklist-sub-item-title {
+                                background-position: right 24px center !important;
+                                
+                                 &:hover,
+                                 &:active {
+                                     background-position: right 15px center !important;
+                                 }
                                 
                                 .checklist-item-tag {
                                     opacity: 1;
@@ -867,6 +766,14 @@
                         
                         &.tip {
                             .checklist-sub-item-title {
+                                
+                                background-position: right 24px center !important;
+                                
+                                &:hover,
+                                &:active {
+                                    background-position: right 15px center !important;
+                                }
+
                                 h3 {
                                     padding-left: 34px;
 
@@ -883,13 +790,14 @@
                     }
                 }
                 
-                 &.open {
+                &.open {
                     .checklist-item-title {
                         background-position: right 24px center;
                         padding: 24px 56px 24px 16px;    
                     }
                 }
             }
+            
         }
         
         @media (max-width: 575px) {
